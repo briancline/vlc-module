@@ -1,0 +1,19 @@
+###############################################################################
+### The Contents of this file are licenced under the GPL.                   ###
+###############################################################################
+
+# What is this?
+###############
+
+This directory is a copy of the Windows SDK extraced from the VideoLAN Client's
+v1.1.13 release. This SDK applies only to the Windows port of VLC.
+
+# From the VLC FAQ:
+###################
+
+ * http://www.videolan.org/support/faq.html
+
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version. The text of the license can be found on the GNU website.

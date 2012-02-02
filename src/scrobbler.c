@@ -438,7 +438,7 @@ static void Close(vlc_object_t *p_this)
 
 
 /*****************************************************************************
- * ParseURL : Split an http:// URL into host, file, and port
+ * ParseURL : Split an http:// URL into host, path, and port
  *
  * Example: "62.216.251.205:80/protocol_1.2"
  *      will be split into "62.216.251.205", 80, "protocol_1.2"
@@ -633,7 +633,6 @@ static void Run(intf_thread_t *p_intf)
             free(psz_submit);
             continue;
         }
-
 
         /* we transmit the data */
         int i_net_ret = net_Printf(p_intf, i_post_socket, NULL,
