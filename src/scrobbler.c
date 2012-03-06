@@ -118,11 +118,11 @@ int ParseURL(char*, char**, char**, int*);
 vlc_module_begin ()
     set_category(CAT_INTERFACE)
     set_subcategory(SUBCAT_INTERFACE_CONTROL)
-    set_shortname(N_("Mediascrobbler"))
+    set_shortname(N_("Watched.it Media Scrobbler"))
     set_description(N_("Submission of watched videos to Watched.it"))
     add_string("watchedit-apikey", "",
                 APIKEY_TEXT, APIKEY_LONGTEXT, false)
-    add_string("mediascrobbler-url", "scrobbler.watched.it.local:5000",
+    add_string("mediascrobbler-url", "scrobbler.watched.it",
                 URL_TEXT, URL_LONGTEXT, false)
     set_capability("interface", 0)
     set_callbacks(Open, Close)
@@ -240,7 +240,7 @@ static void AddToQueue (intf_thread_t *p_this)
     if ((played_time < 600) &&
         (played_time < (p_sys->p_current_item.i_l / 2)))
     {
-        msg_Dbg(p_this, "Item not watched long enough, not submitting (was %d), wanted  > 600, or > %lld",
+        msg_Dbg(p_this, "Item not watched long enough, not submitting (was %lld), wanted  > 600, or > %d",
             played_time, (p_sys->p_current_item.i_l / 2));
         goto end;
     }
